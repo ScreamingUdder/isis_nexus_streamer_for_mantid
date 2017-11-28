@@ -80,8 +80,8 @@ std::unordered_map<hsize_t, sEEventVector> NexusFileReader::getSEEventMap() {
                                                              longValues[i]));
           else
             sEEventMap[frameNumber].push_back(
-                std::make_shared<SampleEnvironmentEventString>(
-                    name, times[i], stringValues[i]));
+              std::make_shared<SampleEnvironmentEventInt>(name, times[i],
+                                                          0));
         }
       }
     }
